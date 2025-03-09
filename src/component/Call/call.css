@@ -2,7 +2,7 @@
   position: relative;
   display: flex;
   align-items: center;
-  background-color: var(--appliance-white);
+  /* background-color: var(--appliance-white); */
   padding-left: 25px;
   padding-right: 45px;
   padding-top: 14px;

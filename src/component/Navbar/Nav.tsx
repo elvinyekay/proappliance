@@ -13,6 +13,7 @@ function Nav() {
               <div className="dropdown">
                 <Link href={nav.link} className="dropbtn navlink">
                   {nav.name}
+                  <i className="bi bi-chevron-down"></i>
                 </Link>
                 <ul className="dropdown-content">
                   {nav.children.map((child) => (

@@ -50,10 +50,10 @@
     border-radius: 4px;
     color: #fff;
   }
-  .navbar .getstarted:hover,
-  .navbar .getstarted:focus:hover {
-    color: #f2f2f2;
-    color: #171717;
+  .navbar .navlink i {
+    font-size: 12px;
+    padding-top: 5px;
+    padding-left: 2px;
   }
   .navbar .dropdown {
     position: relative;
