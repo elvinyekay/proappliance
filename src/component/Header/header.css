@@ -1,0 +1,62 @@
+.header {
+  height: 90px;
+  transition: all 0.5s;
+  z-index: 997;
+  background: var(--appliance-white);
+  box-shadow: 0px 10px 60px 0px rgba(0, 0, 0, 0.05);
+}
+.header.sticked {
+  height: 70px;
+}
+.header .logo img {
+  max-height: 40px;
+  margin-right: 6px;
+}
+.header .logo h1 {
+  font-size: 30px;
+  font-weight: 700;
+  color: var(--appliance-primary);
+}
+
+.header .mobile-menu {
+  display: none;
+}
+.header .mobile-menu .mobile-menu-button {
+  transition: all 0.4s ease;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  flex-direction: column;
+  height: 48px;
+  width: 48px;
+  border: 1px solid #0f0f0f;
+  border-radius: 50%;
+  padding-right: 12px;
+}
+.header .mobile-menu .mobile-menu-button:hover {
+  border-color: var(--appliance-primary);
+}
+.header .mobile-menu .mobile-menu-button .icon-dots-menu-1 {
+  height: 2px;
+  width: 10px;
+  background-color: #0f0f0f;
+  transition: all 0.4s ease;
+}
+.header .mobile-menu .mobile-menu-button .icon-dots-menu-2 {
+  height: 1.4px;
+  width: 20px;
+  background-color: #0f0f0f;
+  margin-top: 5px;
+  transition: all 0.4s ease;
+}
+.header .mobile-menu .mobile-menu-button:hover .icon-dots-menu-1,
+.header .mobile-menu .mobile-menu-button:hover .icon-dots-menu-2 {
+  background-color: var(--appliance-primary);
+}
+
+@media (max-width: 1280px) {
+  .header .mobile-menu {
+    display: flex;
+    position: relative;
+  }
+}
