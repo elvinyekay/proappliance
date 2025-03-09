@@ -10,6 +10,50 @@ export const navs = [
     name: 'Services',
     link: 'services',
     active: false,
+    children: [
+      {
+        id: 1,
+        name: 'Refrigerator Repair',
+        link: '/services/refrigerator',
+        active: false,
+      },
+      {
+        id: 2,
+        name: 'Cooktop Repair',
+        link: '/services/cooktop',
+        active: false,
+      },
+      {
+        id: 3,
+        name: 'Oven Repair',
+        link: '/services/oven',
+        active: false,
+      },
+      {
+        id: 4,
+        name: 'Dishwasher Repair',
+        link: '/services/dishwasher',
+        active: false,
+      },
+      {
+        id: 5,
+        name: 'Microwave Repair',
+        link: '/services/microwave',
+        active: false,
+      },
+      {
+        id: 6,
+        name: 'Stove Repair',
+        link: '/services/stove',
+        active: false,
+      },
+      {
+        id: 7,
+        name: 'Washer Repair',
+        link: '/services/washer',
+        active: false,
+      },
+    ],
   },
   {
     id: 4,
