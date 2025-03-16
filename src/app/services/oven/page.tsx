@@ -1,5 +1,10 @@
+import Hero from '@/sections/Hero';
 import React from 'react';
 
 export default function Oven() {
-  return <div>Oven</div>;
+  return (
+    <div>
+      <Hero />
+    </div>
+  );
 }

@@ -52,7 +52,13 @@ const Header = () => {
             <span className="icon-dots-menu-2"></span>
           </a>
         </div>
-        <NavMobile onClose={() => setOpenMenu(false)} open={openMenu} />
+        <NavMobile
+          onClose={() => {
+            console.log('clik close');
+            setOpenMenu(false);
+          }}
+          open={openMenu}
+        />
       </div>
     </header>
   );

@@ -1,5 +1,10 @@
+import Hero from '@/sections/Hero';
 import React from 'react';
 
 export default function Brands() {
-  return <main id="main">Brands</main>;
+  return (
+    <main id="main">
+      <Hero />
+    </main>
+  );
 }

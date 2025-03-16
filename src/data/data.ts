@@ -2,13 +2,13 @@ export const navs = [
   {
     id: 2,
     name: 'About',
-    link: 'about',
+    link: '/about',
     active: false,
   },
   {
     id: 3,
     name: 'Services',
-    link: 'services',
+    link: '/services',
     active: false,
     children: [
       {
@@ -58,31 +58,31 @@ export const navs = [
   {
     id: 4,
     name: 'Reviews',
-    link: 'reviews',
+    link: '/reviews',
     active: false,
   },
   {
     id: 5,
     name: 'Brands',
-    link: 'brands',
+    link: '/brands',
     active: false,
   },
   {
     id: 6,
     name: 'Blog',
-    link: 'blog',
+    link: '/blog',
     active: false,
   },
   {
     id: 7,
     name: 'Privacy and Policy',
-    link: 'privacy',
+    link: '/privacy',
     active: false,
   },
   {
     id: 8,
     name: 'Contact',
-    link: 'contact',
+    link: '/contact',
     active: false,
   },
 ];
