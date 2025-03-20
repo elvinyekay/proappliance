@@ -56,7 +56,7 @@
   background-color: var(--appliance-primary);
 }
 
-@media (max-width: 1280px) {
+@media (max-width: 1000px) {
   .header .mobile-menu {
     display: flex;
     position: relative;

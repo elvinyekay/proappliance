@@ -18,7 +18,12 @@ function Nav() {
                 <ul className="dropdown-content">
                   {nav.children.map((child) => (
                     <li key={child.id}>
-                      <Link href={child.link}>{child.name}</Link>
+                      <Link
+                        href={child.link}
+                        onClick={() => (window.location.href = child.link)}
+                      >
+                        {child.name}
+                      </Link>
                     </li>
                   ))}
                 </ul>
