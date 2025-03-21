@@ -90,3 +90,26 @@
   font-size: 22px;
   font-weight: 500;
 }
+
+.footer-inner {
+  display: flex;
+  justify-content: center;
+  padding: 63px 0 41px;
+}
+.footer-inner-items {
+  display: flex;
+  justify-content: space-between;
+  max-width: 1200px;
+}
+
+.footer-inner-item {
+  width: 25%;
+}
+
+.footer-logo {
+  text-transform: uppercase;
+  color: var(--appliance-base);
+}
+.footer-item-contents {
+  color: #696d77;
+}
