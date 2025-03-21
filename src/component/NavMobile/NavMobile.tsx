@@ -156,8 +156,8 @@ const NavMobile: React.FC<Props> = ({ onClose, open }) => {
               <a href="">
                 <svg width="24px" height="24px" viewBox="0 0 24 24" fill="#fff">
                   <path
-                    fill-rule="evenodd"
-                    clip-rule="evenodd"
+                    fillRule="evenodd"
+                    clipRule="evenodd"
                     d="M13.065 7.24201C13.0559 8.01293 12.4407 8.63119 11.6891 8.62497C10.9374 8.61874 10.3321 7.99038 10.3351 7.21941C10.3381 6.44845 10.9483 5.82507 11.7 5.82501C12.0642 5.82713 12.4128 5.97764 12.6688 6.24341C12.9248 6.50918 13.0673 6.86841 13.065 7.24201V7.24201Z"
                     // stroke="#fff"
                     strokeWidth="1.5"
