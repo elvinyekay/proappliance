@@ -62,7 +62,8 @@ export default function Footer() {
       </div>
       <div className="footer-copy">
         <p className="copy-text">
-          Copyright © 2023 "Fasteny Appliance Repair" LLC.All right reserved.
+          Copyright © 2023 &quotFasteny Appliance Repair&quot LLC.All right
+          reserved.
         </p>
         <p>Website developed by Elvin.</p>
       </div>
