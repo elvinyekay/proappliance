@@ -47,27 +47,29 @@ export default function Footer() {
               </Link>
             </div>
             <div className="footer-item-contents">
-              <p>You can trust a professional with your appliances.</p>
+              <p className="item-content-text">
+                You can trust a professional with your appliances.
+              </p>
               <div className="footer-socials">
-                <a href="">
+                <a href="#" className="footer-social-icon">
                   <svg
                     viewBox="0 0 30 30"
                     width="20px"
                     height="20px"
-                    fill="#696d77"
+                    fill="#fff"
                   >
                     <path d="M12,27V15H8v-4h4V8.852C12,4.785,13.981,3,17.361,3c1.619,0,2.475,0.12,2.88,0.175V7h-2.305C16.501,7,16,7.757,16,9.291V11 h4.205l-0.571,4H16v12H12z" />
                   </svg>
                 </a>
-                <a href="">
+                <a href="" className="footer-social-icon">
                   <i className="bi bi-instagram"></i>
                 </a>
-                <a href="">
+                <a href="#" className="footer-social-icon">
                   <svg
                     width="24px"
                     height="24px"
                     viewBox="0 0 24 24"
-                    fill="#696d77"
+                    fill="#fff"
                   >
                     <path
                       fillRule="evenodd"
@@ -121,12 +123,18 @@ export default function Footer() {
           </div>
         </div>
       </div>
-      <div className="footer-copy">
-        <p className="copy-text">
-          Copyright © 2023 &quotFasteny Appliance Repair&quot LLC.All right
-          reserved.
-        </p>
-        <p>Website developed by Elvin.</p>
+      <div className="container">
+        <div className="row">
+          <div className="col-xl-12">
+            <div className="footer-copy">
+              <p className="copy-text">
+                Copyright © {new Date().getFullYear()} &quot;Fasteny Appliance
+                Repair&quot; LLC. All right reserved.
+              </p>
+              <p>Website developed by Elvin.</p>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
   );
