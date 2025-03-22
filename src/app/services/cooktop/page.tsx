@@ -1,4 +1,4 @@
-import Hero from '@/sections/Hero';
+import Hero from '@/sections/Hero/Hero';
 import React from 'react';
 
 export default function Cooktop() {

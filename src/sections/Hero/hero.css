@@ -1,0 +1,10 @@
+.hero {
+  width: 100%;
+  /* background-image: url('/assets/img/slider/main-slider-bg.jpg'); */
+  background-color: aquamarine;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 125vh;
+  width: 100%;
+}

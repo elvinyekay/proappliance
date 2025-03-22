@@ -1,10 +1,10 @@
-import Hero from '@/sections/Hero';
+import HeroHome from '@/sections/HeroHome/HeroHome';
 import Posts from '@/sections/Posts';
 
 export default function Home() {
   return (
     <main id={'main'}>
-      <Hero />
+      <HeroHome />
       <Posts />
     </main>
   );
