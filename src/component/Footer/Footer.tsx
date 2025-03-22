@@ -128,8 +128,8 @@ export default function Footer() {
           <div className="col-xl-12">
             <div className="footer-copy">
               <p className="copy-text">
-                Copyright © {new Date().getFullYear()} &quot;Fasteny Appliance
-                Repair&quot; LLC. All right reserved.
+                Copyright © {new Date().getFullYear()} &quot;Pro Appliance
+                Express&quot; LLC. All right reserved.
               </p>
               <p>Website developed by Elvin.</p>
             </div>

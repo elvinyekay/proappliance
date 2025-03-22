@@ -86,21 +86,3 @@ export const navs = [
     active: false,
   },
 ];
-
-export const scis = [
-  {
-    id: 1,
-    icon: 'bi bi-facebook',
-    link: '',
-  },
-  {
-    id: 2,
-    icon: ' bi bi-twitter-x',
-    link: '',
-  },
-  {
-    id: 3,
-    icon: 'bi bi-instagram',
-    link: '',
-  },
-];

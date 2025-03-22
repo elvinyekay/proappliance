@@ -1,0 +1,36 @@
+.services {
+  padding: 120px 0 113px;
+}
+.services .container {
+  max-width: 1200px;
+}
+.services-row {
+  /* display: flex; */
+  align-items: center;
+}
+
+.services-top-right {
+  display: flex;
+  align-items: center;
+  margin-left: 66px;
+  color: var(--appliance-primary);
+}
+
+.service-top-text {
+  font-size: 20px;
+  margin-left: 25px;
+  transition: all 1s ease;
+}
+
+.service-top-icon {
+  display: inline-block;
+  transition: all 1s ease;
+}
+.services-top-right:hover .service-top-icon {
+  transform: scale(0.8);
+  transition: all 1s ease;
+}
+.services-mid-list {
+  display: flex;
+  flex-wrap: wrap;
+}

@@ -1,11 +1,14 @@
 import HeroHome from '@/sections/HeroHome/HeroHome';
-import Posts from '@/sections/Posts';
+import OurServices from '@/sections/OurServices/OurServices';
+import './page.css';
 
 export default function Home() {
   return (
     <main id={'main'}>
       <HeroHome />
-      <Posts />
+      <div className="service-wrapper">
+        <OurServices />
+      </div>
     </main>
   );
 }
