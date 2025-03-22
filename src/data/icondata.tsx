@@ -6,7 +6,6 @@ import Oven from '@/component/Svg/Oven';
 import Refrigerator from '@/component/Svg/Refrigerator';
 import Stove from '@/component/Svg/Stove';
 import Washer from '@/component/Svg/Washer';
-import { link } from 'fs';
 
 export const services = [
   {
