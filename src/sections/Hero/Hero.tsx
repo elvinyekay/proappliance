@@ -1,15 +1,29 @@
 import './hero.css';
 import Link from 'next/link';
 
-export default function Hero() {
+interface IProp {
+  title: string;
+}
+
+export default function Hero({ title }: IProp) {
   return (
     <div className="hero">
-      <h1 className="hero-title">Swift Solutions for Appliance Repair</h1>
-      <p className="hero-text">
-        Trust Fasteny Appliance Repair for All Your Repair Needs
-      </p>
-      <a href="tel:+19453335363">+1 (945) 333-5363</a>
-      <Link href={'/request'}>Service Request</Link>
+      <div className="container">
+        <div className="row">
+          <div className="col-xl-12">
+            <div className="hero-inner">
+              <h1 className="hero-title">{title}</h1>
+              <ul className="hero-bredcrumbs">
+                <li>
+                  <Link href={'/'}>Home</Link>
+                </li>
+                <span>/</span>
+                <li>{title}</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   );
 }

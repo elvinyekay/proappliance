@@ -4,7 +4,7 @@ import React from 'react';
 export default function Reviews() {
   return (
     <main id="main">
-      <Hero />
+      <Hero title="reviews" />
     </main>
   );
 }

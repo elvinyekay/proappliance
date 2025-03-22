@@ -4,7 +4,7 @@ import React from 'react';
 export default function Privacy() {
   return (
     <main id="main">
-      <Hero />
+      <Hero title="privacy policy" />
     </main>
   );
 }

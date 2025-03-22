@@ -4,7 +4,7 @@ import React from 'react';
 export default function Oven() {
   return (
     <div>
-      <Hero />
+      <Hero title="oven repair" />
     </div>
   );
 }

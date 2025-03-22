@@ -4,7 +4,7 @@ import React from 'react';
 export default function Refrigerator() {
   return (
     <div>
-      <Hero />
+      <Hero title="refrigerator repair" />
     </div>
   );
 }

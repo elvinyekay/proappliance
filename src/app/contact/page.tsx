@@ -4,7 +4,7 @@ import React from 'react';
 export default function Contact() {
   return (
     <main id="main">
-      <Hero />
+      <Hero title="contact" />
     </main>
   );
 }

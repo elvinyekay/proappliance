@@ -4,7 +4,7 @@ import React from 'react';
 export default function Dishwasher() {
   return (
     <div>
-      <Hero />
+      <Hero title="dishwasher repair" />
     </div>
   );
 }

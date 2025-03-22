@@ -4,7 +4,7 @@ import React from 'react';
 export default function Cooktop() {
   return (
     <div>
-      <Hero />
+      <Hero title="cooktop repair" />
     </div>
   );
 }

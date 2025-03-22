@@ -4,7 +4,7 @@ import React from 'react';
 export default function Microwave() {
   return (
     <div>
-      <Hero />
+      <Hero title="microvawe repair" />
     </div>
   );
 }

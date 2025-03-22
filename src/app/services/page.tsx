@@ -4,7 +4,7 @@ import Hero from '../../sections/Hero/Hero';
 export default function Services() {
   return (
     <main id="main">
-      <Hero />
+      <Hero title="services" />
     </main>
   );
 }
