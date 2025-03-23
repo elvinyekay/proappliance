@@ -3,8 +3,14 @@ import './ourservices.css';
 import SectionTitle from '@/component/SectionTitle/SectionTitle';
 import { services } from '@/data/icondata';
 import Link from 'next/link';
+import Plus from '@/component/Svg/Plus';
+import Dryer from '@/component/Svg/Dryer';
 
-export default function OurServices() {
+interface IPops {
+  custom?: boolean;
+}
+
+export default function OurServices({ custom }: IPops) {
   return (
     <div className="services">
       <div className="container">
@@ -19,7 +25,7 @@ export default function OurServices() {
               </div>
             </div>
             <div className="col-xl-6 col-lg-6">
-              <div className="services-top-right">
+              <div className={`services-top-right ${custom && 'custom-right'}`}>
                 <div className="service-top-icon">
                   <svg
                     viewBox="0 0 64 64"
@@ -39,15 +45,48 @@ export default function OurServices() {
           </div>
         </div>
         <div className="services-mid">
+          {!custom && <div className="service-bg-img"></div>}
           <ul className="services-mid-list">
             {services.map((service) => (
-              <li key={service.id}>
-                <Link href={service.link}>
-                  <div>{service.icon}</div>
-                  <p>{service.name}</p>
+              <li key={service.id} className="services-list-item">
+                <div
+                  className={`services-list-icon ${custom && 'custom-icon'}`}
+                >
+                  {service.icon}
+                </div>
+                <div className="services-text-box">
+                  <p className="service-list-name">
+                    <Link href={service.link}>{service.name}</Link>
+                  </p>
+                  <p className={`service-list-text ${custom && 'custom-text'}`}>
+                    Service and Repairs
+                  </p>
+                </div>
+                <Link href={service.link} className="service-list-link">
+                  Read more
+                  <Plus width="13px" height="13px" />
                 </Link>
               </li>
             ))}
+            {custom ? (
+              <li className="services-list-item">
+                <div className="services-list-icon">
+                  <Dryer width="64px" height="64px" />,
+                </div>
+                <div className="services-text-box">
+                  <p className="service-list-name">
+                    <Link href={'/services/dryer'}>Dryer</Link>
+                  </p>
+                  <p className="service-list-text">Service and Repairs</p>
+                </div>
+                <Link href={'/services/dryer'} className="service-list-link">
+                  Read more
+                  <Plus width="13px" height="13px" />
+                </Link>
+              </li>
+            ) : (
+              <></>
+            )}
           </ul>
         </div>
         <div className="services-bottom"></div>

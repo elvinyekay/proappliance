@@ -1,0 +1,22 @@
+.page-services {
+  position: relative;
+}
+.services-wrapper {
+  background-image: url('/assets/img/repair-dishwashers.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  z-index: -2;
+}
+.services-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(255, 255, 255, 0.95);
+}
+.services-content {
+  position: relative;
+  z-index: 9;
+}

@@ -50,10 +50,10 @@ export const services = [
     link: '/services/washer',
     name: 'Washer',
   },
-  {
-    id: 8,
-    icon: <Dryer width="64px" height="64px" />,
-    link: '#',
-    name: 'Dryer',
-  },
+  // {
+  //   id: 8,
+  //   icon: <Dryer width="64px" height="64px" />,
+  //   link: '#',
+  //   name: 'Dryer',
+  // },
 ];

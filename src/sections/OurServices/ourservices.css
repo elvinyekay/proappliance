@@ -1,5 +1,6 @@
 .services {
   padding: 120px 0 113px;
+  overflow: hidden;
 }
 .services .container {
   max-width: 1200px;
@@ -16,6 +17,10 @@
   color: var(--appliance-primary);
 }
 
+.custom-right {
+  color: #013e7e;
+}
+
 .service-top-text {
   font-size: 20px;
   margin-left: 25px;
@@ -30,7 +35,191 @@
   transform: scale(0.8);
   transition: all 1s ease;
 }
+
+.services-mid {
+  position: relative;
+  /* overflow-y: hidden; */
+}
+
+.service-bg-img {
+  background-image: url('/assets/img/services-one-img-1.png');
+  background-repeat: no-repeat;
+  background-position: right bottom;
+  position: absolute;
+  bottom: -13px;
+  right: -165px;
+  width: 100%;
+  height: 100%;
+}
+
 .services-mid-list {
   display: flex;
+  position: relative;
   flex-wrap: wrap;
+  z-index: 1;
+  /* background-color: #061f31; */
+}
+
+.services-list-item {
+  flex: 0 0 25%;
+  max-width: 25%;
+  transition: all 0.9s ease;
+  transform-style: preserve-3d;
+  border: 1px solid #314a54;
+  padding: 39px 40px 32px;
+}
+.services-list-item:nth-child(2),
+.services-list-item:nth-child(3),
+.services-list-item:nth-child(4) {
+  border-left: 0;
+  border-bottom: 0;
+}
+.services-list-item:nth-child(6),
+.services-list-item:nth-child(7),
+.services-list-item:nth-child(8) {
+  border-left: 0;
+}
+.services-list-item:nth-child(5) {
+  border-top: 0;
+}
+
+.services-text-box {
+  margin: 45px 0 26px;
+}
+.service-list-name {
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 22px;
+  margin-bottom: 6px;
+  transition: all 0.4s ease;
+}
+.service-list-name a {
+  transition: all 0.4s ease;
+}
+.services-list-item:hover .service-list-name a {
+  color: var(--appliance-base);
+}
+
+.service-list-text {
+  font-size: 17px;
+  color: #b3dced;
+  line-height: 20px;
+}
+.custom-text {
+  color: var(--appliance-black);
+}
+
+.service-list-link {
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  color: #11aded;
+  font-weight: 700;
+  font-family: var(--appliance-font-two);
+  text-transform: uppercase;
+  transition: all 400ms ease;
+}
+.service-list-link svg {
+  margin-left: 10px;
+}
+
+.services-list-icon svg {
+  color: var(--appliance-base);
+  transition: all 0.9s ease;
+  transform-style: preserve-3d;
+}
+.custom-icon svg {
+  color: #013e7e;
+}
+.services-list-item:hover svg {
+  transform: rotateY(180deg);
+}
+
+.services-list-item:hover .service-list-link {
+  color: var(--appliance-base);
+}
+
+@media only screen and (max-width: 1200px) {
+  .service-bg-img {
+    display: none;
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .services .container {
+    max-width: 720px;
+  }
+  .services-list-item {
+    flex: 0 0 33.333333%;
+    max-width: 33.333333%;
+  }
+  .services-top {
+    margin-bottom: 69px;
+  }
+  .services-row {
+    gap: 50px;
+  }
+  .services-top-right {
+    margin-left: 0;
+  }
+  .services-list-item:nth-child(2),
+  .services-list-item:nth-child(3) {
+    border-bottom: 1px solid #314a54;
+  }
+  .services-list-item:nth-child(4) {
+    border-left: 1px solid #314a54;
+    border-top: 0;
+  }
+  .services-list-item:nth-child(5) {
+    border-left: 0;
+  }
+  .services-list-item:nth-child(6) {
+    border-top: 0;
+  }
+  .services-list-item:nth-child(7) {
+    border-left: 1px solid #314a54;
+  }
+  .services-list-item:nth-child(8) {
+    border-top: 0;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .services .container {
+    max-width: 540px;
+  }
+  .services-list-item {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  .services-top {
+    margin-bottom: 69px;
+  }
+  .services-row {
+    gap: 50px;
+  }
+  .services-top-right {
+    margin-left: 0;
+  }
+
+  .services-list-item:nth-child(1) {
+    border-bottom: 0;
+  }
+  .services-list-item:nth-child(2),
+  .services-list-item:nth-child(3) {
+    border-left: 1px solid #314a54;
+  }
+  .services-list-item:nth-child(4) {
+    border-left: 1px solid #314a54;
+    border-bottom: 1px solid #314a54;
+  }
+  .services-list-item:nth-child(5) {
+    border-bottom: 0;
+  }
+  .services-list-item:nth-child(6),
+  .services-list-item:nth-child(7) {
+    border-left: 1px solid #314a54;
+    border-bottom: 0;
+  }
 }
