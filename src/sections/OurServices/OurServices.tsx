@@ -70,14 +70,18 @@ export default function OurServices({ custom }: IPops) {
             ))}
             {custom ? (
               <li className="services-list-item">
-                <div className="services-list-icon">
+                <div
+                  className={`services-list-icon ${custom && 'custom-icon'}`}
+                >
                   <Dryer width="64px" height="64px" />,
                 </div>
                 <div className="services-text-box">
                   <p className="service-list-name">
                     <Link href={'/services/dryer'}>Dryer</Link>
                   </p>
-                  <p className="service-list-text">Service and Repairs</p>
+                  <p className={`service-list-text ${custom && 'custom-text'}`}>
+                    Service and Repairs
+                  </p>
                 </div>
                 <Link href={'/services/dryer'} className="service-list-link">
                   Read more
@@ -89,7 +93,12 @@ export default function OurServices({ custom }: IPops) {
             )}
           </ul>
         </div>
-        <div className="services-bottom"></div>
+        {!custom && (
+          <div className="services-bottom">
+            We Do All Differeent Services ....
+            <Link href={'/services'}> View all Services</Link>
+          </div>
+        )}
       </div>
     </div>
   );
