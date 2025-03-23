@@ -1,6 +1,5 @@
 import Cooktop from '@/component/Svg/Cooktop';
 import Dishwasher from '@/component/Svg/Dishwasher';
-import Dryer from '@/component/Svg/Dryer';
 import Microvawe from '@/component/Svg/Microvawe';
 import Oven from '@/component/Svg/Oven';
 import Refrigerator from '@/component/Svg/Refrigerator';
@@ -50,10 +49,4 @@ export const services = [
     link: '/services/washer',
     name: 'Washer',
   },
-  // {
-  //   id: 8,
-  //   icon: <Dryer width="64px" height="64px" />,
-  //   link: '#',
-  //   name: 'Dryer',
-  // },
 ];
