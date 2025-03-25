@@ -86,3 +86,66 @@ export const navs = [
     active: false,
   },
 ];
+
+export const logos = [
+  {
+    id: 1,
+    imgUrl: '/assets/img/brands/samsung-logo.png',
+  },
+  {
+    id: 2,
+    imgUrl: '/assets/img/brands/bosch-logo.png',
+  },
+  {
+    id: 3,
+    imgUrl: '/assets/img/brands/lg-logo-lg.png',
+  },
+  {
+    id: 4,
+    imgUrl: '/assets/img/brands/Electrolux-Logo.png',
+  },
+  {
+    id: 5,
+    imgUrl: '/assets/img/brands/whirlpool-logo.png',
+  },
+  {
+    id: 6,
+    imgUrl: '/assets/img/brands/Kenmore-logo.png',
+  },
+  {
+    id: 7,
+    imgUrl: '/assets/img/brands/kitchenaid-logo.jpg',
+  },
+  {
+    id: 8,
+    imgUrl: '/assets/img/brands/2016_Maytag-logo.jpeg',
+  },
+  {
+    id: 9,
+    imgUrl: '/assets/img/brands/dacor.png',
+  },
+  {
+    id: 10,
+    imgUrl: '/assets/img/brands/Amana-Logo.png',
+  },
+  {
+    id: 11,
+    imgUrl: '/assets/img/brands/logo-subzero.png',
+  },
+  {
+    id: 12,
+    imgUrl: '/assets/img/brands/thermador-logo.webp',
+  },
+  {
+    id: 13,
+    imgUrl: '/assets/img/brands/Frigidaire-Logo.png',
+  },
+  {
+    id: 14,
+    imgUrl: '/assets/img/brands/source-jenn-air.jpg',
+  },
+  {
+    id: 15,
+    imgUrl: '/assets/img/brands/viking.png',
+  },
+];
