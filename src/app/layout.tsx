@@ -23,8 +23,9 @@ const roboto = Roboto({
 });
 
 export const metadata: Metadata = {
-  title: 'News App',
-  description: 'Every day news app',
+  title: 'Pro Appliance Express',
+  description:
+    'Best Appliance Repair Services in Boston MA | Pro Appliance Express',
 };
 
 export default function RootLayout({

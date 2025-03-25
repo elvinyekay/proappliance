@@ -1,0 +1,116 @@
+.request {
+  padding: 120px 0 120px;
+}
+.request .container {
+  max-width: 1200px;
+}
+
+.request-title {
+  width: 85%;
+  font-size: 68px;
+  font-weight: 700;
+  line-height: 74px;
+  letter-spacing: -2px;
+  color: var(--appliance-white);
+}
+.custom-title {
+  color: var(--appliance-black);
+}
+
+.request-call {
+  display: inline-block;
+  background-color: var(--appliance-white);
+  padding: 17px 35px 17px;
+  margin-top: 20px;
+}
+
+.custom-call {
+  background-color: var(--appliance-black);
+  color: var(--appliance-white);
+}
+
+.request-right {
+  background-color: var(--appliance-base);
+  padding: 63px 45px 60px;
+  margin-left: 100px;
+}
+.request-form-title {
+  font-size: 32px;
+  color: #242424;
+  line-height: 42px;
+  font-weight: 900;
+  margin-bottom: 5px;
+}
+.request-form {
+  margin-top: 20px;
+}
+
+.request-form-field {
+  margin-bottom: 10px;
+  height: 52px;
+  width: 100%;
+  border: 1px solid #e1cc6b;
+  background-color: #f5dc69;
+  color: var(--appliance-gray);
+  padding-left: 25px;
+  padding-right: 25px;
+  outline: none;
+  display: block;
+  border-radius: 3px;
+  font-weight: 400;
+  font-size: 18px;
+}
+
+.request-form-area {
+  margin-bottom: 10px;
+  height: 120px;
+  width: 100%;
+  border: 1px solid #e1cc6b;
+  background-color: #f5dc69;
+  padding: 15px 25px 15px;
+  outline: none;
+  border-radius: 3px;
+  color: var(--assimox-gray);
+  font-weight: 400;
+  font-size: 18px;
+}
+
+.request-form-btn {
+  border: none;
+  background-color: #061f31;
+  color: var(--appliance-white);
+  text-transform: uppercase;
+  width: 100%;
+  border-radius: 4px;
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-appearance: none;
+  outline: none !important;
+  font-size: 14px;
+  font-weight: 700;
+  padding: 14px 45px 12px;
+  font-family: var(--appliance-font-two);
+  letter-spacing: 0.1em;
+  transition: all 0.5s linear;
+  overflow: hidden;
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  .request .container {
+    max-width: 960px;
+  }
+}
+
+@media only screen and (max-width: 840px) {
+  .request-title {
+    font-size: 62px;
+  }
+  .request-right {
+    margin-left: 0;
+    margin-top: 50px;
+  }
+}
+
+@media only screen and (max-width: 542px) {
+}

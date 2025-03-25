@@ -2,8 +2,11 @@ import React from 'react';
 import Link from 'next/link';
 import { navs } from '@/data/data';
 import './nav.css';
+import { usePathname } from 'next/navigation';
 
 function Nav() {
+  const pathName = usePathname();
+
   return (
     <nav id={'navbar'} className={'navbar'}>
       <ul>
@@ -11,7 +14,12 @@ function Nav() {
           <li key={nav.id} className="nav-item">
             {nav.children ? (
               <div className="dropdown">
-                <Link href={nav.link} className="dropbtn navlink">
+                <Link
+                  href={nav.link}
+                  className={`dropbtn navlink ${
+                    pathName == nav.link ? 'active' : ''
+                  }`}
+                >
                   {nav.name}
                   <i className="bi bi-chevron-down"></i>
                 </Link>
@@ -29,7 +37,10 @@ function Nav() {
                 </ul>
               </div>
             ) : (
-              <Link href={nav.link} className="navlink">
+              <Link
+                href={nav.link}
+                className={`navlink ${pathName == nav.link ? 'active' : ''}`}
+              >
                 {nav.name}
               </Link>
             )}

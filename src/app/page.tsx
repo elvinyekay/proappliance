@@ -3,6 +3,7 @@ import OurServices from '@/sections/OurServices/OurServices';
 import './page.css';
 import AboutUs from '@/sections/AboutUs/AboutUs';
 import BrandsRepair from '@/sections/BrandsRepair/BrandsRepair';
+import ServiceRequest from '@/sections/ServiceRequest/ServiceRequest';
 
 export default function Home() {
   return (
@@ -12,6 +13,9 @@ export default function Home() {
         <OurServices />
       </div>
       <AboutUs />
+      <div className="request-wrapper">
+        <ServiceRequest />
+      </div>
       <BrandsRepair />
     </main>
   );

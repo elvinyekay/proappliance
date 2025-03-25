@@ -2,3 +2,10 @@
   background-color: #061f31;
   color: var(--appliance-white);
 }
+
+.request-wrapper {
+  background-image: url('/assets/img/faq-one-bg.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
