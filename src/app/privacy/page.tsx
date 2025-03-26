@@ -1,7 +1,6 @@
 import Hero from '@/sections/Hero/Hero';
 import React from 'react';
 import './privacy.css';
-import SectionTitle from '@/component/SectionTitle/SectionTitle';
 
 export default function Privacy() {
   return (
