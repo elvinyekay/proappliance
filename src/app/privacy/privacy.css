@@ -1,0 +1,39 @@
+.privacy {
+  padding: 120px 0 120px;
+}
+.privacy-content {
+  width: 60%;
+}
+
+.privacy-title {
+  font-size: 48px;
+  margin-bottom: 30px;
+}
+
+.privacy-content p {
+  color: #89939f;
+  font-size: 15px;
+}
+
+.privacy-content h2 {
+  font-size: 36px;
+  font-weight: 700;
+}
+
+.privacy-content h3 {
+  font-size: 24px;
+  font-weight: 700;
+}
+
+@media only screen and (max-width: 1024px) {
+  .privacy-content {
+    width: 80%;
+  }
+}
+
+@media only screen and (max-width: 542px) {
+  .privacy-content {
+    width: 90%;
+    margin-left: 10px;
+  }
+}
