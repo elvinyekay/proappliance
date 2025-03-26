@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import './navmobile.css';
 import Link from 'next/link';
 import { navs } from '@/data/data';
+import Facebook from '../Svg/Facebook';
 
 type Props = {
   onClose: () => void;
@@ -137,20 +138,13 @@ const NavMobile: React.FC<Props> = ({ onClose, open }) => {
               </a>
             </div>
             <div className="social-icons">
-              <a href="">
-                <svg
-                  viewBox="0 0 30 30"
-                  width="20px"
-                  height="20px"
-                  fill="white"
-                >
-                  <path d="M12,27V15H8v-4h4V8.852C12,4.785,13.981,3,17.361,3c1.619,0,2.475,0.12,2.88,0.175V7h-2.305C16.501,7,16,7.757,16,9.291V11 h4.205l-0.571,4H16v12H12z" />
-                </svg>
+              <a href="#">
+                <Facebook width="20px" height="20px" />
               </a>
-              <a href="">
+              <a href="#">
                 <i className="bi bi-instagram"></i>
               </a>
-              <a href="">
+              <a href="#">
                 <svg width="24px" height="24px" viewBox="0 0 24 24" fill="#fff">
                   <path
                     fillRule="evenodd"

@@ -1,0 +1,130 @@
+.contact {
+  padding: 120px 0 120px;
+}
+
+.contact .container {
+  max-width: 1200px;
+}
+
+.contact-left {
+  padding-right: 48px;
+}
+
+.contact-title {
+  margin-bottom: 20px;
+}
+
+.contact-text {
+  color: #666666;
+  font-weight: 300;
+}
+
+.contact-text-sum {
+  margin-bottom: 20px;
+}
+
+.contact-items {
+  border-bottom: 1px solid #dcdcde;
+  padding-bottom: 10px;
+  margin-bottom: 40px;
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+.contact-item .bi {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 35px;
+  width: 60px;
+  height: 60px;
+  background-color: rgba(0, 167, 235, 0.15);
+  color: #00a7eb;
+  border-radius: 50%;
+}
+
+.contact-item-link {
+  text-transform: uppercase;
+  color: #00a7eb;
+  font-weight: 500;
+  font-style: 13px;
+  letter-spacing: 1px;
+}
+
+.contact-item-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 6px;
+  height: 100%;
+}
+
+.contact-item-desc {
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 25px;
+  margin-bottom: 0;
+}
+
+.contact-bottom {
+  align-items: center;
+  display: flex;
+}
+.contact-bottom h5 {
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 0;
+  letter-spacing: 1px;
+}
+
+.contact-bottom-icons {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  color: #00a7eb;
+  line-height: 1;
+  margin: 5px;
+  padding-left: 10px;
+}
+
+.contact-bottom-icons a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  background-color: transparent;
+  border-radius: 4px;
+  transition: all 0.4s ease;
+}
+
+.contact-bottom-icons a:hover {
+  background-color: #00a7eb;
+  transition: all 0.4s ease;
+}
+
+.contact-bottom-icons a:hover i {
+  color: #fff;
+  transition: all 0.4s ease;
+}
+
+.contact-bottom-icons a:hover svg {
+  fill: #fff;
+  transition: all 0.4s ease;
+}
+
+.contact-right iframe {
+  width: 100%;
+  height: 100%;
+}
+
+@media only screen and (max-width: 1023px) {
+  .contact-right {
+    margin-top: 50px;
+    height: 40vh;
+  }
+}
