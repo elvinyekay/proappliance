@@ -27,11 +27,13 @@ export default function Blog() {
                   <div className="blog-item-content">
                     <div className="blog-item-date">{blogItem.date}</div>
                     <h3 className="blog-item-title">
-                      <Link href={'#'}>{blogItem.title}</Link>
+                      <Link href={`/blog/${blogItem.slug}`}>
+                        {blogItem.title}
+                      </Link>
                     </h3>
                     <div className="blog-item-desc">{blogItem.desc}</div>
                     <div className="blog-btn-box">
-                      <Link href={'#'}>Read more</Link>
+                      <Link href={`/blog/${blogItem.slug}`}>Read more</Link>
                     </div>
                   </div>
                 </div>
