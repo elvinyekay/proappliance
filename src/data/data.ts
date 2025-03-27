@@ -149,3 +149,20 @@ export const logos = [
     imgUrl: '/assets/img/brands/viking.png',
   },
 ];
+
+export const blogsShort = [
+  {
+    id: 1,
+    imgUrl: '/assets/img/blog-img/blog-2.jpg',
+    date: 'March 24, 2024',
+    title: 'Reducing Refrigerator Energy Consumption: Expert Tips and Tricks',
+    desc: 'Welcome to our comprehensive guide on reducing refrigerator energy consumption. At Fasteny Appliance Repair, we understand the importance of energy efficiency in everyday ...',
+  },
+  {
+    id: 2,
+    imgUrl: '/assets/img/blog-img/blog-1.jpg',
+    date: 'January 18, 2025',
+    title: 'How to Effectively Unclog a Dishwasher that Isn’t Draining',
+    desc: 'At our company, we understand the frustration that arises when your dishwasher fails to drain properly. A clogged dishwasher can disrupt your daily routine and leave you with a pile of dirty dishes. In this comprehensive guide, we will provide you with...',
+  },
+];
