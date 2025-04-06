@@ -120,7 +120,11 @@ export default function BlogPage() {
       </div>
       <div className="featured-blogs container">
         {blogs.map((blog) => (
-          <Link href={`/blog/${blog.slug}`} className="featured-blogs-item">
+          <Link
+            href={`/blog/${blog.slug}`}
+            key={blog.id}
+            className="featured-blogs-item"
+          >
             <Image
               src={blog.imgUrl}
               alt={'blog img'}
