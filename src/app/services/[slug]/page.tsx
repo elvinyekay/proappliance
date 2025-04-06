@@ -7,6 +7,7 @@ import Hero from '@/sections/Hero/Hero';
 import Image from 'next/image';
 import { services } from '@/data/data';
 import './servicedetail.css';
+import LoadScreen from '@/component/LoadScreen/LoadScreen';
 
 export default function ServicesPage() {
   const params = useParams();
@@ -23,13 +24,7 @@ export default function ServicesPage() {
     }
   }, [params?.slug]);
 
-  if (!service)
-    return (
-      <>
-        <Hero title="Services" hideBreadcrumbs />
-        <h1>Loading...</h1>
-      </>
-    );
+  if (!service) return <LoadScreen />;
 
   return (
     <section>

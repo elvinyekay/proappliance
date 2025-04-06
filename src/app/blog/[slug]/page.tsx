@@ -5,6 +5,7 @@ import { notFound, useParams } from 'next/navigation';
 import Image from 'next/image';
 import Hero from '@/sections/Hero/Hero';
 import './blogdetail.css';
+import LoadScreen from '@/component/LoadScreen/LoadScreen';
 
 export default function BlogPage() {
   const params = useParams();
@@ -21,13 +22,7 @@ export default function BlogPage() {
     }
   }, [params?.slug]);
 
-  if (!blog)
-    return (
-      <>
-        <Hero title={'Blog'} hideBreadcrumbs />
-        <h1>Loading...</h1>
-      </>
-    );
+  if (!blog) return <LoadScreen />;
 
   return (
     <section className="blogdetail">
