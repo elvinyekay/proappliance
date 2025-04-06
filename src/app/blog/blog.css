@@ -102,4 +102,7 @@
   .blog-item-title {
     font-size: 22px;
   }
+  .blog-item-content {
+    margin-left: 0;
+  }
 }

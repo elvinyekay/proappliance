@@ -6,6 +6,7 @@ import Image from 'next/image';
 import Hero from '@/sections/Hero/Hero';
 import './blogdetail.css';
 import LoadScreen from '@/component/LoadScreen/LoadScreen';
+import Link from 'next/link';
 
 export default function BlogPage() {
   const params = useParams();
@@ -113,6 +114,26 @@ export default function BlogPage() {
           <h3>{blog?.h3Title6}</h3>
           <p>{blog?.h3Title6Text}</p>
         </div>
+      </div>
+      <div className="featured-blogs-head container">
+        <h2>Related article</h2>
+      </div>
+      <div className="featured-blogs container">
+        {blogs.map((blog) => (
+          <Link href={`/blog/${blog.slug}`} className="featured-blogs-item">
+            <Image
+              src={blog.imgUrl}
+              alt={'blog img'}
+              width={570}
+              height={435}
+              priority
+            />
+            <div className="featured-item-content">
+              <h6>{blog.title}</h6>
+              <p>{blog.date}</p>
+            </div>
+          </Link>
+        ))}
       </div>
     </section>
   );
