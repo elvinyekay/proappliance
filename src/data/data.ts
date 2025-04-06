@@ -13,42 +13,49 @@ export const navs = [
     children: [
       {
         id: 1,
+        slug: 'refrigerator',
         name: 'Refrigerator Repair',
         link: '/services/refrigerator',
         active: false,
       },
       {
         id: 2,
+        slug: 'cooktop',
         name: 'Cooktop Repair',
         link: '/services/cooktop',
         active: false,
       },
       {
         id: 3,
+        slug: 'oven',
         name: 'Oven Repair',
         link: '/services/oven',
         active: false,
       },
       {
         id: 4,
+        slug: 'dishwasher',
         name: 'Dishwasher Repair',
         link: '/services/dishwasher',
         active: false,
       },
       {
         id: 5,
+        slug: 'microwave',
         name: 'Microwave Repair',
         link: '/services/microwave',
         active: false,
       },
       {
         id: 6,
+        slug: 'stove',
         name: 'Stove Repair',
         link: '/services/stove',
         active: false,
       },
       {
         id: 7,
+        slug: 'washer',
         name: 'Washer Repair',
         link: '/services/washer',
         active: false,
@@ -291,5 +298,120 @@ export const blogs = [
       'By following the steps outlined in this guide, you can effectively unclog your dishwasher and restore its optimal performance. Remember to perform regular maintenance, such as cleaning the drain filter and inspecting the drain hose, to prevent future clogs. If you encounter persistent clogging issues or need further assistance, it’s advisable to consult a professional dishwasher repair service. With these proactive measures, you can ensure a smoothly running dishwasher that consistently provides clean and sparkling dishes.',
     h3Title5Text2:
       'Pro Appliance Express offers dishwasher repair in Boston MS. Fill out our online form for all your appliance repair needs at +1 (945) 333-5363.',
+  },
+];
+
+export const services = [
+  {
+    id: 1,
+    slug: 'refrigerator',
+    name: 'Refrigerator Repair',
+    imgUrl: '/assets/img/services/fridge.jpg',
+    tag: 'Our Services',
+    title:
+      'Refrigerator Repair Services in Boston: Your Trusted Appliance Partner',
+    text_1:
+      'Welcome to our expert refrigerator repair services in Houston! At Pro Appliance Express, we take immense pride in offering top-notch refrigerator repair solutions that prioritize efficiency, quality, and customer satisfaction. Our team of highly skilled technicians is dedicated to providing you with unparalleled service, ensuring your refrigerator is back to its optimal working condition in no time. Whether you’re dealing with cooling issues, strange noises, or any other refrigerator problem, you can rely on us to exceed your expectations.',
+    isContent: true,
+    subhead_1: 'Why Choose Us for Refrigerator Repair?',
+    subtitle_2: '1. Experienced Technicians',
+    subtext_2:
+      'Our team consists of experienced technicians who have a deep understanding of various refrigerator makes and models. With years of hands-on experience, we diagnose issues accurately and implement effective solutions.',
+    subtitle_3: '2. Prompt Service',
+    subtext_3:
+      'We understand the inconvenience a malfunctioning refrigerator can cause. That’s why we offer prompt service to get your appliance up and running as quickly as possible. Our same-day repair option ensures minimal disruption to your daily routine.',
+    subtitle_4: '3. Comprehensive Repairs',
+    subtext_4:
+      'From compressor problems to thermostat issues, our comprehensive repair services cover a wide range of refrigerator problems. We address both common and complex issues to provide a one-stop solution for all your repair needs.',
+    subtitle_5: '4. Genuine Parts',
+    subtext_5:
+      'We believe in using only genuine, manufacturer-approved parts for replacements. This ensures the longevity of your refrigerator’s performance and minimizes the likelihood of future breakdowns.',
+    subhead_2: 'Our Refrigerator Repair Process',
+    subtext_6:
+      '1. Thorough Diagnosis Upon arrival, our technician will conduct a thorough assessment of your refrigerator to pinpoint the exact issue. We use advanced diagnostic tools to ensure accuracy.',
+    subtext_7:
+      '2. Transparent Explanation After identifying the problem, we’ll provide you with a clear and transparent explanation of the issue, along with the necessary steps for repair',
+    subtext_8:
+      '3. Efficient Repair With your approval, our technician will begin the repair process. Our goal is to fix the problem efficiently while ensuring high-quality workmanship.',
+    subtext_9:
+      '4. Testing and Verification Once the repair is complete, we test the refrigerator to verify that the issue has been resolved. Our technicians ensure that all components are functioning correctly.',
+    subhead_3: 'DIY Maintenance Tips',
+    subtext_10:
+      'While our expert technicians are always ready to assist you, here are some maintenance tips to keep your refrigerator in optimal condition:',
+    sublist_1:
+      'Regular Cleaning: Wipe down shelves, drawers, and the interior with a mild detergent to prevent odors and bacteria buildup.',
+    sublist_2:
+      'Proper Ventilation: Ensure there’s enough space around the refrigerator for proper ventilation, which helps maintain consistent cooling.',
+    sublist_3:
+      'Temperature Settings: Set the refrigerator and freezer temperatures according to the manufacturer’s recommendations to optimize food preservation.',
+    subhead_4: 'Understanding Refrigerator Noises',
+    subtext_11:
+      'Refrigerators can make various noises, some of which might be normal, while others could indicate underlying issues. Here’s a quick guide to understanding these sounds:',
+    sublist_4:
+      '1. Normal Humming: A gentle hum is usually the sound of the compressor working, which is perfectly normal.',
+    sublist_5:
+      '2. Clicking: Occasional clicking sounds during startup and shutdown are common and typically not a cause for concern.',
+    sublist_6:
+      '3. Loud Noises: Loud banging, rattling, or grinding noises could signal problems with the compressor, motor, or fan. It’s advisable to contact professionals for immediate inspection.',
+  },
+  {
+    id: 2,
+    slug: 'cooktop',
+    name: 'Cooktop Repair',
+    imgUrl: '/assets/img/services/kitchen-interior.jpg',
+    tag: 'Our Services',
+    title: 'Cooktop',
+    text_1:
+      'At Pro Appliance Express Service, we understand how important your cooktop is to your daily routine. Whether you have a gas, electric or induction cooktop, our experienced technicians can provide regular maintenance or emergency repair to address any issues. From faulty burners to broken controls, we have the expertise to fix your cooktop quickly and efficiently. We also offer preventative maintenance to help extend the life of your appliance, and we’ll always provide a transparent and competitive price quote before beginning any repairs. Plus, we’ll share tips on how to use your cooktop efficiently to avoid future problems. Trust us to get your cooktop back in working order so you can get back to cooking up your favorite dishes.',
+  },
+  {
+    id: 3,
+    slug: 'oven',
+    name: 'Oven Repair',
+    imgUrl: '/assets/img/services/oven.jpg',
+    tag: 'Our Services',
+    title: 'Oven',
+    text_1:
+      'We understand that a malfunctioning oven can put a damper on your cooking routine. That’s why our expert technicians offer regular maintenance and emergency repairs to address any issue with your oven, from faulty heating elements to broken controls. We also provide preventative maintenance to help extend the life of your appliance, and we’ll always offer a fair and transparent price quote before beginning any repairs. Plus, we’ll share tips on how to use your oven efficiently to avoid future problems. Trust us to get your oven back in working order so you can cook up a storm. be facing, and we always strive to provide fast, reliable service.',
+  },
+  {
+    id: 4,
+    slug: 'dishwasher',
+    name: 'Dishwasher Repair',
+    imgUrl: '/assets/img/services/dishwasher.jpg',
+    tag: 'Our Services',
+    title: 'Dishwasher',
+    text_1:
+      'At Pro Appliance Express Service, we understand how frustrating it can be to deal with a faulty dishwasher. That’s why our skilled technicians are available for regular maintenance and emergency repairs to get your dishwasher working like new again. We provide careful preventative maintenance to help prevent future issues, and we always offer a fair and transparent price quote before beginning any repairs. Plus, we’ll offer tips on how to use your dishwasher efficiently to avoid future problems. Trust us to get your dishes clean and sparkling once again.',
+  },
+  {
+    id: 5,
+    slug: 'microwave',
+    name: 'Microwave Repair',
+    imgUrl: '/assets/img/services/microwave.jpg',
+    tag: 'Our Services',
+    title: 'Microwave',
+    text_1:
+      'At Pro Appliance Express Service, we know that a malfunctioning microwave can be a major inconvenience. That’s why our expert technicians offer regular maintenance and emergency repairs to address any issue with your microwave, from faulty heating to electrical problems. We’ll also provide preventative maintenance to help extend the life of your appliance, and we’ll always offer a transparent and fair price quote before beginning any repairs. Trust us to get your microwave back in top shape and to provide tips on how to use it efficiently to avoid future problems.',
+  },
+  {
+    id: 6,
+    slug: 'stove',
+    name: 'Stove Repair',
+    imgUrl: '/assets/img/services/stove.jpg',
+    tag: 'Our Services',
+    title: 'Stove',
+    text_1:
+      'At Pro Appliance Express Repair Service, we understand that a malfunctioning stove can be a major inconvenience in your daily routine. That’s why our experienced technicians offer both regular maintenance and emergency repairs to address any issue with your stove, from faulty burners to broken controls. We also provide preventative maintenance to help extend the life of your appliance, and we’ll always offer a transparent and fair price quote before beginning any repairs. Plus, we’ll share tips on how to use your stove efficiently to avoid future problems. Trust us to get your stove back in working order so you can get back to cooking up your favorite meals.',
+  },
+  {
+    id: 7,
+    slug: 'washer',
+    name: 'Washer Repair',
+    imgUrl: '/assets/img/services/laundry.jpg',
+    tag: 'Our Services',
+    title: 'Washer',
+    text_1:
+      'At Pro Appliance Express Repair Service, we’re here to tackle any washing machine problem, big or small. Our expert technicians offer both routine maintenance and emergency repairs to get your washer back up and running in no time. Plus, we’ll share our tips for using your appliance more efficiently to help you avoid future issues. Trust us for reliable service at a fair price.',
   },
 ];

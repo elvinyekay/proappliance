@@ -28,6 +28,7 @@ export default function BlogPage() {
         <h1>Loading...</h1>
       </>
     );
+
   return (
     <section className="blogdetail">
       <Hero title={blog.title} hideBreadcrumbs />

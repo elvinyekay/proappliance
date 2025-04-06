@@ -27,8 +27,9 @@ function Nav() {
                   {nav.children.map((child) => (
                     <li key={child.id}>
                       <Link
-                        href={child.link}
+                        href={`/services/${child.slug}`}
                         onClick={() => (window.location.href = child.link)}
+                        className={`${pathName == child.link ? 'active' : ''}`}
                       >
                         {child.name}
                       </Link>
