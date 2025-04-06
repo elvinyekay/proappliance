@@ -62,12 +62,12 @@ export const navs = [
       },
     ],
   },
-  {
-    id: 4,
-    name: 'Reviews',
-    link: '/reviews',
-    active: false,
-  },
+  // {
+  //   id: 4,
+  //   name: 'Reviews',
+  //   link: '/reviews',
+  //   active: false,
+  // },
   {
     id: 5,
     name: 'Brands',

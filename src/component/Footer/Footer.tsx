@@ -11,8 +11,8 @@ export default function Footer() {
             <div className="footer-head-item">
               <i className="bi bi-geo-alt"></i>
               <p className="item-content">
-                <span>54B, Tailstoi Town 5238 MT, </span>
-                <span>La city, IA 522364</span>
+                <span>75 Wolcott St, Malden, MA</span>
+                {/* <span>La city, IA 522364</span> */}
               </p>
               <p className="line"></p>
             </div>
@@ -30,8 +30,8 @@ export default function Footer() {
               <i className="bi bi-telephone"></i>
               <p className="item-content">
                 <span>Call us on:</span>
-                <a href="tel:+19453335363" className="item-tel">
-                  + 1945 333 5363
+                <a href="tel:+16173377045" className="item-tel">
+                  +1 (617) 337-7045
                 </a>
               </p>
             </div>
@@ -113,7 +113,7 @@ export default function Footer() {
                   <Link href={'/request'}>Service Request</Link>
                 </li>
                 <li>
-                  <a href="tel:+19453335363">Customer Support</a>
+                  <a href="tel:+16173377045">Customer Support</a>
                 </li>
                 <li>
                   <Link href={'/contact'}>Contact us</Link>

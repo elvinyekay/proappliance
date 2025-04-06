@@ -45,7 +45,7 @@ export default function ServicesPage() {
             <div className="col-xl-6 col-lg-6 service-details_col">
               <SectionTitle tag={service.tag} title={service.title} />
               <p className="service-details_text">{service.text_1}</p>
-              <MainButton title="+1 (945) 333-5363" href="tel:+19453335363" />
+              <MainButton title="+1 (617) 337-7045" href="tel:+16173377045" />
             </div>
           </div>
           {service?.isContent && (

@@ -132,9 +132,9 @@ const NavMobile: React.FC<Props> = ({ onClose, open }) => {
                 <i className="bi bi-envelope-fill"></i>
                 <span>proapplianceexpress@gmail.com</span>
               </a>
-              <a className="contacts-icon" href="tel:+19453335363">
+              <a className="contacts-icon" href="tel:+16173377045">
                 <i className="bi bi-telephone-fill"></i>
-                <span>+ 1945 333 5363</span>
+                <span>+1 (617) 337-7045</span>
               </a>
             </div>
             <div className="social-icons">

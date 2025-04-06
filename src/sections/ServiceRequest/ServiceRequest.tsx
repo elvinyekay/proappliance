@@ -17,9 +17,9 @@ export default function ServiceRequest({ custom }: IProps) {
               </h3>
               <a
                 className={`request-call ${custom ? 'custom-call' : ''}`}
-                href="tel:+19453335363"
+                href="tel:+16173377045"
               >
-                +1 (945) 333-5363
+                +1 (617) 337-7045
               </a>
             </div>
           </div>
