@@ -6,6 +6,7 @@ import Nav from '@/component/Navbar/Nav';
 import Call from '@/component/Call/Call';
 import Link from 'next/link';
 import NavMobile from '../NavMobile/NavMobile';
+import Image from 'next/image';
 
 const Header = () => {
   const [openMenu, setOpenMenu] = useState(false);
@@ -40,7 +41,14 @@ const Header = () => {
     >
       <div className="container-fluid  d-flex align-items-center justify-content-between">
         <Link href="/" className="logo d-flex align-items-center">
-          <h1>ProAppliance</h1>
+          <Image
+            src={'/logo.png'}
+            alt="logo"
+            layout="intrinsic"
+            width={365}
+            height={240}
+            priority
+          />
         </Link>
         <Nav />
         <div className="position-relative">

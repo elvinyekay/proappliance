@@ -35,6 +35,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        <link rel="icon" href="/favicon.ico" type="image/x-icon" />
+        <meta name="theme-color" content="#ffffff" />
+      </head>
       <body className={`${barlow.className} ${roboto.className}`}>
         <Header />
         {children}

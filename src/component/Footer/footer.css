@@ -203,4 +203,7 @@
   .footer-copy p {
     text-align: center;
   }
+  .footer-logo img {
+    max-width: 90%;
+  }
 }

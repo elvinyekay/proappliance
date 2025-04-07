@@ -11,7 +11,9 @@
   height: 70px;
 }
 .header .logo img {
-  max-height: 40px;
+  width: 300px;
+  height: auto;
+  /* max-height: 40px; */
   margin-right: 6px;
 }
 .header .logo h1 {
@@ -60,5 +62,11 @@
   .header .mobile-menu {
     display: flex;
     position: relative;
+  }
+}
+
+@media only screen and (max-width: 542px) {
+  .header .logo img {
+    width: 200px;
   }
 }

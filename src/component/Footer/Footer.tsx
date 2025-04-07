@@ -1,6 +1,7 @@
 import React from 'react';
 import './footer.css';
 import Link from 'next/link';
+import Image from 'next/image';
 
 export default function Footer() {
   return (
@@ -43,7 +44,14 @@ export default function Footer() {
           <div className="footer-inner-item">
             <div className="logo">
               <Link href="/" className="footer-logo d-flex align-items-center">
-                <h2>Pro Appliance</h2>
+                <Image
+                  src={'/logo-yellow.png'}
+                  alt="logo"
+                  layout="intrinsic"
+                  width={365}
+                  height={240}
+                  priority
+                />
               </Link>
             </div>
             <div className="footer-item-contents">
