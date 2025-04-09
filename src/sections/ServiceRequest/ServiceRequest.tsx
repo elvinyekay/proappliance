@@ -1,30 +1,48 @@
 'use client';
-import React, { useState } from 'react';
+import React from 'react';
+import { useForm } from 'react-hook-form';
+import { z } from 'zod';
+import { zodResolver } from '@hookform/resolvers/zod';
+import Swal from 'sweetalert2';
 import './servicerequest.css';
 
 interface IProps {
   custom?: boolean;
 }
 
+const schema = z.object({
+  name: z
+    .string()
+    .min(2, { message: 'Must be more than two characters' })
+    .refine((value: string) => value.trim() !== '', {
+      message: 'Name is required',
+    }),
+  phone: z
+    .string()
+    .min(1, 'Phone number is required')
+    .regex(/^(?:\(\d{3}\)\s?|\d{3}[-.\s]?)\d{3}[-.\s]?\d{4}$/, {
+      message: 'Invalid phone number format',
+    }),
+  email: z.string().regex(/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/, {
+    message: 'Invalid email',
+  }),
+  message: z
+    .string()
+    .min(10, { message: 'Minimum 10 symbols' })
+    .refine((value) => value.trim() !== '', { message: 'Message is required' }),
+});
+
+type FormData = z.infer<typeof schema>;
+
 export default function ServiceRequest({ custom }: IProps) {
-  const [formData, setFormData] = useState({
-    name: '',
-    phone: '',
-    email: '',
-    message: '',
-  });
+  const {
+    register,
+    handleSubmit,
+    reset,
+    formState: { errors, isSubmitting },
+  } = useForm<FormData>({ resolver: zodResolver(schema) });
 
-  const handleChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
-  ) => {
-    setFormData({ ...formData, [e.target.name]: e.target.value });
-  };
-
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-
-    console.log(formData);
-
+  const onSubmit = async (formData: FormData) => {
     const res = await fetch('/api/sendMail', {
       method: 'POST',
       headers: {
@@ -35,9 +53,20 @@ export default function ServiceRequest({ custom }: IProps) {
 
     const data = await res.json();
     if (data.success) {
-      alert('Mesaj gonderildi');
+      Swal.fire({
+        icon: 'success',
+        title: 'Success!',
+        text: 'Your message has been sent successfully!',
+        timer: 5000,
+      });
+      reset();
     } else {
-      alert('Xeta bash verdi');
+      Swal.fire({
+        icon: 'error',
+        title: 'Error!',
+        text: 'Something wrong',
+        timer: 5000,
+      });
     }
   };
 
@@ -61,50 +90,58 @@ export default function ServiceRequest({ custom }: IProps) {
           <div className="col-xl-6 col-lg-6">
             <div className="request-right">
               <h2 className="request-form-title">Submit a Service Request</h2>
-              <form className="request-form" onSubmit={handleSubmit}>
+              <form className="request-form" onSubmit={handleSubmit(onSubmit)}>
                 <div className="row">
                   <div className="col-xl-12">
                     <input
                       type="text"
-                      name="name"
                       placeholder="Your Name"
                       className="request-form-field"
-                      onChange={handleChange}
-                      value={formData.name}
+                      {...register('name')}
                     />
+                    <p className="error">
+                      {errors.name && `* ${errors.name.message}`}
+                    </p>
                   </div>
                   <div className="col-xl-12">
                     <input
                       type="text"
-                      name="phone"
                       placeholder="Phone No."
                       className="request-form-field"
-                      onChange={handleChange}
-                      value={formData.phone}
+                      {...register('phone')}
                     />
+                    <p className="error">
+                      {errors.phone && `* ${errors.phone.message}`}
+                    </p>
                   </div>
                   <div className="col-xl-12">
                     <input
                       type="email"
-                      name="email"
                       placeholder="Email Address"
                       className="request-form-field"
-                      onChange={handleChange}
-                      value={formData.email}
+                      {...register('email')}
                     />
+                    <p className="error">
+                      {errors.email && `* ${errors.email.message}`}
+                    </p>
                   </div>
                 </div>
                 <div className="row">
                   <div className="col-xl-12">
                     <textarea
-                      name="message"
                       placeholder="Message"
                       className="request-form-area"
-                      onChange={handleChange}
-                      value={formData.message}
+                      {...register('message')}
                     ></textarea>
-                    <button className="request-form-btn" type="submit">
-                      send request
+                    <p className="error">
+                      {errors.message && `* ${errors.message.message}`}
+                    </p>
+                    <button
+                      className="request-form-btn"
+                      type="submit"
+                      disabled={isSubmitting}
+                    >
+                      {isSubmitting ? 'sending' : 'send request'}
                     </button>
                   </div>
                 </div>
