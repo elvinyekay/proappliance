@@ -38,6 +38,36 @@ export default function RootLayout({
       <head>
         <link rel="icon" href="/favicon.ico" type="image/x-icon" />
         <meta name="theme-color" content="#ffffff" />
+        {/* SEO Meta Tags */}
+        <meta name="robots" content="index, follow" />
+        <meta name="author" content="Pro Appliance Express" />
+        <meta
+          name="keywords"
+          content="Appliance Repair, Boston, Washer, Dryer, Fridge, Pro Appliance Express"
+        />
+        {/* Open Graph Tags */}
+        <meta
+          property="og:title"
+          content="Pro Appliance Express | Appliance Repair in Boston"
+        />
+        <meta
+          property="og:description"
+          content="Get professional appliance repair services in Boston. Same day service available!"
+        />
+        <meta property="og:image" content="/og-image.jpg" />
+        <meta property="og:url" content="https://proapplianceexpress.com" />
+        <meta property="og:type" content="website" />
+        {/* Twitter Card Tags */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta
+          name="twitter:title"
+          content="Pro Appliance Express | Appliance Repair in Boston"
+        />
+        <meta
+          name="twitter:description"
+          content="Fast and reliable appliance repair service in Boston MA."
+        />
+        <meta name="twitter:image" content="/og-image.jpg" />
       </head>
       <body className={`${barlow.className} ${roboto.className}`}>
         <Header />
