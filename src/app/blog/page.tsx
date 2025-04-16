@@ -5,6 +5,45 @@ import { blogsShort } from '@/data/data';
 import Image from 'next/image';
 import Link from 'next/link';
 
+export const metadata = {
+  title: 'Blog | Appliance Repair Tips & News | Pro Appliance Express',
+  description:
+    'Explore expert appliance repair tips, maintenance advice, and the latest updates from Pro Appliance Express. Stay informed and keep your home running smoothly!',
+  keywords: [
+    'Appliance repair blog',
+    'Home appliance maintenance',
+    'DIY appliance tips',
+    'Refrigerator repair advice',
+    'Washer and dryer care',
+    'Oven troubleshooting tips',
+    'Appliance news Boston',
+    'Pro Appliance Express blog',
+  ],
+  openGraph: {
+    title: 'Blog | Appliance Repair Tips & News',
+    description:
+      'Useful tips and updates on appliance care and repair. Learn from the experts at Pro Appliance Express.',
+    url: 'https://proapplianceexpress.com/blog',
+    type: 'website',
+    siteName: 'Pro Appliance Express',
+    images: [
+      {
+        url: '/og-image.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'Appliance Repair Blog - Pro Appliance Express',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Blog | Appliance Repair Tips & News | Pro Appliance Express',
+    description:
+      'Stay updated with expert advice on appliance maintenance and repairs from our Boston-based professionals.',
+    images: ['/og-image.jpg'],
+  },
+};
+
 export default function Blog() {
   return (
     <main id="main">

@@ -1,13 +1,56 @@
 'use client';
 import React, { useEffect, useState } from 'react';
-import MainButton from '@/component/MainButton/MainButton';
+import { Metadata } from 'next';
+import Image from 'next/image';
 import { notFound, useParams } from 'next/navigation';
+import MainButton from '@/component/MainButton/MainButton';
 import SectionTitle from '@/component/SectionTitle/SectionTitle';
 import Hero from '@/sections/Hero/Hero';
-import Image from 'next/image';
+import LoadScreen from '@/component/LoadScreen/LoadScreen';
 import { services } from '@/data/data';
 import './servicedetail.css';
-import LoadScreen from '@/component/LoadScreen/LoadScreen';
+
+type Props = {
+  params: {
+    slug: string;
+  };
+};
+
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const service = services.find((s) => s.slug === params.slug);
+
+  if (!service) {
+    return {
+      title: 'Services | Pro Appliance Express',
+      description: 'Explore our range of appliance repair services.',
+    };
+  }
+
+  const url = `https://proapplianceexpress.com/service/${service.slug}`;
+
+  return {
+    title: `${service.title} | Pro Appliance Express`,
+    openGraph: {
+      title: `${service.title} | Pro Appliance Express`,
+      url,
+      type: 'website',
+      siteName: 'Pro Appliance Express',
+      images: [
+        {
+          url: '/og-image.jpg',
+          width: 1200,
+          height: 630,
+          alt: service.title,
+        },
+      ],
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: service.title,
+      images: ['/og-image.jpg'],
+    },
+  };
+}
 
 export default function ServicesPage() {
   const params = useParams();

@@ -1,12 +1,71 @@
 'use client';
 import React, { useEffect, useState } from 'react';
-import { blogs } from '@/data/data';
+import { Metadata } from 'next';
 import { notFound, useParams } from 'next/navigation';
 import Image from 'next/image';
-import Hero from '@/sections/Hero/Hero';
-import './blogdetail.css';
-import LoadScreen from '@/component/LoadScreen/LoadScreen';
 import Link from 'next/link';
+import Hero from '@/sections/Hero/Hero';
+import LoadScreen from '@/component/LoadScreen/LoadScreen';
+import { blogs } from '@/data/data';
+import './blogdetail.css';
+
+type BlogProps = {
+  params: {
+    slug: string;
+  };
+};
+
+export async function generateMetadata({
+  params,
+}: BlogProps): Promise<Metadata> {
+  const post = blogs.find((post) => post.slug === params.slug);
+
+  if (!post) {
+    return {
+      title: 'Blog | Pro Appliance Express',
+      description:
+        'Explore expert tips and repair guides for your home appliances.',
+    };
+  }
+
+  const url = `https://proapplianceexpress.com/blog/${post.slug}`;
+
+  return {
+    title: `${post.title} | Pro Appliance Express Blog`,
+    description:
+      'Learn how to fix a leaking dishwasher quickly and efficiently.',
+    keywords: [
+      'Dishwasher repair',
+      'DIY tips',
+      'Home maintenance',
+      'Dryer repair',
+      'Home appliance tips',
+    ],
+    openGraph: {
+      title: `${post.title} | Pro Appliance Express Blog`,
+      description:
+        'Learn how to fix a leaking dishwasher quickly and efficiently.',
+      url,
+      type: 'article',
+      siteName: 'Pro Appliance Express',
+      images: [
+        {
+          url: '/og-image.jpg',
+          width: 1200,
+          height: 630,
+          alt: post.title,
+        },
+      ],
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: post.title,
+      description:
+        'Learn how to fix a leaking dishwasher quickly and efficiently.',
+      images: ['/og-image.jpg'],
+    },
+  };
+}
 
 export default function BlogPage() {
   const params = useParams();

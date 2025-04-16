@@ -2,6 +2,45 @@ import Hero from '@/sections/Hero/Hero';
 import React from 'react';
 import './privacy.css';
 
+export const metadata = {
+  title: 'Privacy Policy | Pro Appliance Express',
+  description:
+    'Learn how Pro Appliance Express collects, uses, and protects your personal information. Read our full privacy policy here.',
+  keywords: [
+    'Privacy Policy',
+    'Data collection',
+    'Customer data protection',
+    'Pro Appliance Express privacy',
+    'User privacy',
+    'Appliance service privacy',
+    'Personal information policy',
+    'Boston appliance service privacy',
+  ],
+  openGraph: {
+    title: 'Privacy Policy | Pro Appliance Express',
+    description:
+      'Read how we handle and protect your personal information when using Pro Appliance Express services in Boston, MA.',
+    url: 'https://proapplianceexpress.com/privacy',
+    type: 'website',
+    siteName: 'Pro Appliance Express',
+    images: [
+      {
+        url: '/og-image.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'Privacy Policy - Pro Appliance Express',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Privacy Policy | Pro Appliance Express',
+    description:
+      'Discover how we manage and protect your personal data. View our privacy practices and policies.',
+    images: ['/og-image.jpg'],
+  },
+};
+
 export default function Privacy() {
   return (
     <main id="main">

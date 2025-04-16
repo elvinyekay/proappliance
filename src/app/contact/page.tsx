@@ -4,6 +4,45 @@ import Hero from '@/sections/Hero/Hero';
 import React from 'react';
 import './contact.css';
 
+export const metadata = {
+  title: 'Contact Us | Pro Appliance Express - Boston Appliance Repair',
+  description:
+    'Need to schedule an appliance repair? Contact Pro Appliance Express in Boston for fast and friendly service. Call, email, or fill out our contact form today.',
+  keywords: [
+    'Contact Pro Appliance Express',
+    'Appliance repair contact',
+    'Appliance repair Boston',
+    'Schedule service',
+    'Call appliance technician',
+    'Boston home appliance repair',
+    'Email appliance repair company',
+    'Contact appliance service',
+  ],
+  openGraph: {
+    title: 'Contact Us | Pro Appliance Express',
+    description:
+      'Reach out to Pro Appliance Express in Boston for expert appliance repair services. We’re here to help!',
+    url: 'https://proapplianceexpress.com/contact',
+    type: 'website',
+    siteName: 'Pro Appliance Express',
+    images: [
+      {
+        url: '/og-image.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'Contact Pro Appliance Express',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Contact Us | Pro Appliance Express',
+    description:
+      'Get in touch with our appliance repair experts in Boston. Fast & friendly support from Pro Appliance Express.',
+    images: ['/og-image.jpg'],
+  },
+};
+
 export default function Contact() {
   return (
     <main id="main">
