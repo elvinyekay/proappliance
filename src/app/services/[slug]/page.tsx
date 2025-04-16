@@ -1,7 +1,7 @@
 'use client';
 import React, { useEffect, useState } from 'react';
-import { Metadata } from 'next';
 import Image from 'next/image';
+import Head from 'next/head';
 import { notFound, useParams } from 'next/navigation';
 import MainButton from '@/component/MainButton/MainButton';
 import SectionTitle from '@/component/SectionTitle/SectionTitle';
@@ -9,48 +9,6 @@ import Hero from '@/sections/Hero/Hero';
 import LoadScreen from '@/component/LoadScreen/LoadScreen';
 import { services } from '@/data/data';
 import './servicedetail.css';
-
-type Props = {
-  params: {
-    slug: string;
-  };
-};
-
-export async function generateMetadata({ params }: Props): Promise<Metadata> {
-  const service = services.find((s) => s.slug === params.slug);
-
-  if (!service) {
-    return {
-      title: 'Services | Pro Appliance Express',
-      description: 'Explore our range of appliance repair services.',
-    };
-  }
-
-  const url = `https://proapplianceexpress.com/service/${service.slug}`;
-
-  return {
-    title: `${service.title} | Pro Appliance Express`,
-    openGraph: {
-      title: `${service.title} | Pro Appliance Express`,
-      url,
-      type: 'website',
-      siteName: 'Pro Appliance Express',
-      images: [
-        {
-          url: '/og-image.jpg',
-          width: 1200,
-          height: 630,
-          alt: service.title,
-        },
-      ],
-    },
-    twitter: {
-      card: 'summary_large_image',
-      title: service.title,
-      images: ['/og-image.jpg'],
-    },
-  };
-}
 
 export default function ServicesPage() {
   const params = useParams();
@@ -67,10 +25,37 @@ export default function ServicesPage() {
     }
   }, [params?.slug]);
 
+  const url = `https://proapplianceexpress.com/service/${service.slug}`;
+  const imageUrl = '/og-image.jpg';
+
   if (!service) return <LoadScreen />;
 
   return (
     <section>
+      <Head>
+        <title>{`${service.title} | Pro Appliance Express`}</title>
+        <meta
+          name="description"
+          content={
+            service.description ||
+            'Explore our expert appliance repair services.'
+          }
+        />
+        <meta
+          property="og:title"
+          content={`${service.title} | Pro Appliance Express`}
+        />
+        <meta property="og:url" content={url} />
+        <meta property="og:type" content="website" />
+        <meta property="og:image" content={imageUrl} />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
+        <meta property="og:site_name" content="Pro Appliance Express" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content={service.title} />
+        <meta name="twitter:image" content={imageUrl} />
+        <meta name="twitter:site" content="@ProApplianceExpress" />
+      </Head>
       <Hero title={service.slug} />
       <div className="service-details">
         <div className="container">
