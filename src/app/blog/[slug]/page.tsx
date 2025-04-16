@@ -8,6 +8,7 @@ import Hero from '@/sections/Hero/Hero';
 import LoadScreen from '@/component/LoadScreen/LoadScreen';
 import { blogs } from '@/data/data';
 import './blogdetail.css';
+import Head from 'next/head';
 
 type BlogProps = {
   params: {
@@ -84,8 +85,49 @@ export default function BlogPage() {
 
   if (!blog) return <LoadScreen />;
 
+  const url = `https://proapplianceexpress.com/blog/${blog.slug}`;
+  const imageUrl = blog.imgUrl || '/og-image.jpg';
+
   return (
     <section className="blogdetail">
+      <Head>
+        <title>{`${blog.title} | Pro Appliance Express Blog`}</title>
+        <meta
+          name="description"
+          content={
+            blog.description ||
+            'Explore expert tips and repair guides for your home appliances.'
+          }
+        />
+        <meta
+          property="og:title"
+          content={`${blog.title} | Pro Appliance Express Blog`}
+        />
+        <meta
+          property="og:description"
+          content={
+            blog.description ||
+            'Learn how to fix a leaking dishwasher quickly and efficiently.'
+          }
+        />
+        <meta property="og:url" content={url} />
+        <meta property="og:type" content="article" />
+        <meta property="og:image" content={imageUrl} />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
+        <meta property="og:site_name" content="Pro Appliance Express" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content={blog.title} />
+        <meta
+          name="twitter:description"
+          content={
+            blog.description ||
+            'Learn how to fix a leaking dishwasher quickly and efficiently.'
+          }
+        />
+        <meta name="twitter:image" content={imageUrl} />
+        <meta name="twitter:site" content="@ProApplianceExpress" />
+      </Head>
       <Hero title={blog.title} hideBreadcrumbs />
       <div className="container blogdetail-content">
         <div className="blogdetail-hero-img">
