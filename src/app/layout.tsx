@@ -68,6 +68,39 @@ export default function RootLayout({
           content="Fast and reliable appliance repair service in Boston MA."
         />
         <meta name="twitter:image" content="/og-image.jpg" />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              '@context': 'https://schema.org',
+              '@type': 'LocalBusiness',
+              name: 'Pro Appliance Express',
+              image: 'https://proapplianceexpress.com/logo.png',
+              url: 'https://proapplianceexpress.com',
+              telephone: '+1-617-337-7045',
+              address: {
+                '@type': 'PostalAddress',
+                streetAddress: '75 Wolcott St',
+                addressLocality: 'Malden',
+                addressRegion: 'MA',
+                postalCode: '02148',
+                addressCountry: 'US',
+              },
+              priceRange: '$$',
+              openingHours: ['Mo-Su 08:00-20:00'],
+              description:
+                'Professional appliance repair services across Massachusetts, specializing in fridges, washers, dryers, ovens, and more.',
+              areaServed: {
+                '@type': 'Place',
+                address: {
+                  '@type': 'PostalAddress',
+                  addressRegion: 'MA',
+                  addressCountry: 'US',
+                },
+              },
+            }),
+          }}
+        ></script>
       </head>
       <body className={`${barlow.className} ${roboto.className}`}>
         <Header />
