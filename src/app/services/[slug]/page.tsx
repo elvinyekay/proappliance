@@ -12,6 +12,7 @@ import './servicedetail.css';
 
 export default function ServicesPage() {
   const params = useParams();
+
   const [service, setService] = useState<any | null>(null);
 
   useEffect(() => {
