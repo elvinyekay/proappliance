@@ -25,10 +25,10 @@ export default function ServicesPage() {
     }
   }, [params?.slug]);
 
+  if (!service) return <LoadScreen />;
+
   const url = `https://proapplianceexpress.com/service/${service.slug}`;
   const imageUrl = '/og-image.jpg';
-
-  if (!service) return <LoadScreen />;
 
   return (
     <section>
