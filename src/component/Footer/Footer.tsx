@@ -45,7 +45,7 @@ export default function Footer() {
             <div className="logo">
               <Link href="/" className="footer-logo d-flex align-items-center">
                 <Image
-                  src={'/logo-yellow.png'}
+                  src={'/pro-logo-2.png'}
                   alt="logo"
                   layout="intrinsic"
                   width={365}

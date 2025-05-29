@@ -42,7 +42,7 @@ const Header = () => {
       <div className="container-fluid  d-flex align-items-center justify-content-between">
         <Link href="/" className="logo d-flex align-items-center">
           <Image
-            src={'/logo.png'}
+            src={'/pro-logo.png'}
             alt="logo"
             layout="intrinsic"
             width={365}
